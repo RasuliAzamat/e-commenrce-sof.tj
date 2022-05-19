@@ -9,10 +9,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                green: '#7ed9d0',
-                gray: '#EAEAEA',
-                red: '#D96685',
-                black: '#1E1E1E',
+                primary: '#7ed9d0',
+                secondary: '#444444',
+                light: '#EAEAEA',
+                danger: '#D96685',
+                dark: '#1E1E1E',
             },
             fontFamily: {
                 mainFamily: ['DM Sans', 'sans-serif'],

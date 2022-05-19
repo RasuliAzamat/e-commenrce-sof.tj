@@ -1,5 +1,6 @@
 <template>
     <main>
+        <GlobalHeader />
         <slot />
     </main>
 </template>

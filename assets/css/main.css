@@ -2,8 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer {
+@layer base {
     * {
         @apply font-mainFamily;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-medium;
+    }
+
+    input {
+        @apply px-7 py-1 border-inherit bg-inherit outline-none;
+    }
+
+    nav ul li a.active {
+        @apply bg-danger;
     }
 }
