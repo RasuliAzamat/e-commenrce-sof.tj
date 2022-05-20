@@ -1,6 +1,8 @@
 <template>
-    <header class="flex items-center">
-        <ElementLogo />
+    <header class="flex items-center mb-10">
+        <NuxtLink to="/">
+            <img src="/img/header-logo.png" alt="Sof.tj logo" />
+        </NuxtLink>
 
         <div class="flex items-center flex-col flex-1">
             <div class="flex items-center w-full mb-4">
@@ -11,6 +13,8 @@
                         placeholder="я ищу..."
                         class="
                             w-96
+                            px-7
+                            py-1
                             border-2 border-light
                             rounded-md rounded-tr-none rounded-br-none
                             placeholder:text-light
@@ -37,7 +41,11 @@
 
                 <div class="flex items-center text-secondary">
                     <NuxtLink to="tel:+992 95 800 0202" class="mr-4 font-bold">
-                        <img src="/img/icons/phone.svg" alt="phone" class="mr-2 inline-block" />
+                        <img
+                            src="/img/icons/phone.svg"
+                            alt="phone"
+                            class="mr-2 inline-block"
+                        />
                         +992 95 800 0202
                     </NuxtLink>
 
@@ -45,7 +53,7 @@
                         <img src="/img/icons/cart.svg" alt="cart" />
                     </NuxtLink>
 
-                    <NuxtLink to="/profile" class="mr-4">
+                    <NuxtLink to="/profile" class="mr-8">
                         <img src="/img/icons/profile.svg" alt="profile" />
                     </NuxtLink>
                 </div>
@@ -65,7 +73,10 @@
                             :to="path"
                             class="flex items-center px-8 py-4 rounded-xl"
                         >
-                            <DotsVerticalIcon v-if="path === '/'" class="w-5 mr-4" />
+                            <DotsVerticalIcon
+                                v-if="path === '/'"
+                                class="w-5 mr-4"
+                            />
                             {{ name }}
                         </NuxtLink>
                     </li>
@@ -92,4 +103,5 @@ const navLinks = ref([
 ]);
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+</style>

@@ -16,14 +16,18 @@
     }
 
     h3 {
-        @apply text-xl font-medium;
+        @apply text-xl font-bold;
     }
 
     input {
-        @apply px-7 py-1 border-inherit bg-inherit outline-none;
+        @apply border-inherit bg-inherit outline-none;
     }
 
     nav ul li a.active {
         @apply bg-danger;
+    }
+
+    a.active {
+        @apply border-b border-white;
     }
 }

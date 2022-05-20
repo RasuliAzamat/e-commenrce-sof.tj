@@ -2,6 +2,7 @@
     <main>
         <GlobalHeader />
         <slot />
+        <GlobalFooter />
     </main>
 </template>
 
