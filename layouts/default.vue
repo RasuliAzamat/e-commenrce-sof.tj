@@ -1,9 +1,13 @@
 <template>
-    <main>
+    <div>
         <GlobalHeader />
-        <slot />
+
+        <main>
+            <slot />
+        </main>
+        
         <GlobalFooter />
-    </main>
+    </div>
 </template>
 
 <script setup>

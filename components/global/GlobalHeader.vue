@@ -1,7 +1,7 @@
 <template>
     <header class="flex items-center mb-10">
         <NuxtLink to="/">
-            <img src="/img/header-logo.png" alt="Sof.tj logo" />
+            <img src="/img/logo/header-logo.png" alt="Sof.tj logo" />
         </NuxtLink>
 
         <div class="flex items-center flex-col flex-1">
@@ -33,7 +33,7 @@
                     >
                         <img
                             src="/img/icons/search.svg"
-                            alt="search"
+                            alt="иконка поиска"
                             class="w-5"
                         />
                     </span>
@@ -43,18 +43,18 @@
                     <NuxtLink to="tel:+992 95 800 0202" class="mr-4 font-bold">
                         <img
                             src="/img/icons/phone.svg"
-                            alt="phone"
+                            alt="иконка телефона"
                             class="mr-2 inline-block"
                         />
                         +992 95 800 0202
                     </NuxtLink>
 
                     <NuxtLink to="/cart" class="mr-4">
-                        <img src="/img/icons/cart.svg" alt="cart" />
+                        <img src="/img/icons/cart.svg" alt="иконка корзины" />
                     </NuxtLink>
 
                     <NuxtLink to="/profile" class="mr-8">
-                        <img src="/img/icons/profile.svg" alt="profile" />
+                        <img src="/img/icons/profile.svg" alt="иконка профиля" />
                     </NuxtLink>
                 </div>
             </div>

@@ -35,8 +35,8 @@
             <div class="flex flex-col">
                 <NuxtLink to="/" class="self-end">
                     <img
-                        src="/img/footer-logo.png"
-                        alt="Sof.tj logo"
+                        src="/img/logo/footer-logo.png"
+                        alt="Sof.tj лого"
                         class="w-24 mb-16"
                     />
                 </NuxtLink>
