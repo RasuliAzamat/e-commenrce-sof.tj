@@ -71,15 +71,19 @@ const makeActive = (index) => (activeSlideIndex.value = index);
         "slider slider image-1"
         "slider slider image-2";
 }
+
 #slider {
     grid-area: slider;
 }
+
 #image-1 {
     grid-area: image-1;
 }
+
 #image-2 {
     grid-area: image-2;
 }
+
 .dots {
     top: 90%;
     left: 50%;
