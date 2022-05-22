@@ -2,6 +2,9 @@
     <div>
         <IndexSlider />
         <IndexNews />
+        <IndexLastAdded />
+        <IndexBestsallers />
+        <IndexReviews />
     </div>
 </template>
 

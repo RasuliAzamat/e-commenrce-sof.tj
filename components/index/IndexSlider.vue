@@ -12,7 +12,7 @@
                     v-for="(dot, index) in slides"
                     :key="dot"
                     :class="[
-                        'w-2 h-2 mx-2 rounded-3xl cursor-pointer bg-white',
+                        'w-2 h-2 mx-2 rounded-full cursor-pointer bg-white',
                         {
                             active: index === activeSlideIndex,
                         },

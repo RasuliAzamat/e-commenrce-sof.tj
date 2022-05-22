@@ -19,7 +19,9 @@
         @apply text-xl font-bold;
     }
 
-    input {
+    input,
+    button,
+    textarea {
         @apply border-inherit bg-inherit outline-none;
     }
 
@@ -29,5 +31,9 @@
 
     a.active {
         @apply border-b border-white;
+    }
+
+    a.active.no-underline {
+        @apply border-0;
     }
 }

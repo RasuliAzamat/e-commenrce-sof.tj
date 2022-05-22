@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="flex flex-col">
-                <NuxtLink to="/" class="self-end">
+                <NuxtLink to="/" class="self-end no-underline">
                     <img
                         src="/img/logo/footer-logo.png"
                         alt="Sof.tj лого"

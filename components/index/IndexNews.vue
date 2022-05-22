@@ -1,6 +1,6 @@
 <template>
-    <section class="px-8 mb-24">
-        <h3 class="mb-10 text-danger">Акции и новости</h3>
+    <section class="px-8 mb-12">
+        <h2 class="mb-10 text-danger">Акции и новости</h2>
 
         <div class="flex text-3xl font-bold text-white">
             <div
