@@ -18,7 +18,7 @@
 <script setup>
 const news = ref([
     {
-        id: 2,
+        id: 1,
         title: "Новое поступления товаров",
         img: "/img/index/index-img-1.png",
     },
