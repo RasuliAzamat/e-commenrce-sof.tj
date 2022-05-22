@@ -2,6 +2,7 @@
     <section class="container max-w-6xl px-4 ml-auto mr-8 mb-24">
         <div class="flex items-center justify-between mb-12">
             <h2 class="text-danger">Последние добавления</h2>
+            
             <NuxtLink to="#" class="text-2xl no-underline">
                 Cмотреть все
             </NuxtLink>
