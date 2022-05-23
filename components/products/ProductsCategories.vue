@@ -34,8 +34,7 @@
             </div>
             <small>Цена от 20 до 1000 смн</small>
         </div>
-
-        <ElementButton text="Применить" class="px-4 py-1" />
+        <ElementButton class="px-4 py-1">Применить</ElementButton>
     </aside>
 </template>
 

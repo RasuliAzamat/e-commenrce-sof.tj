@@ -8,19 +8,15 @@
             },
         ]"
     >
-        {{ text }}
+        <slot />
     </button>
 </template>
 
 <script setup>
-const { darkmode, text } = defineProps({
+const { darkmode } = defineProps({
     darkmode: {
         type: Boolean,
         default: false,
-    },
-    text: {
-        type: String,
-        required: true,
     },
 });
 </script>
