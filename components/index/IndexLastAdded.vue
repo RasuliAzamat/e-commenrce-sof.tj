@@ -13,7 +13,6 @@
                 v-for="product in lastAddedProducts"
                 :key="product.id"
                 :product="product"
-                cartIconColor="bg-slate-300"
                 class="flex-1 mr-16 last:hidden"
             />
         </div>

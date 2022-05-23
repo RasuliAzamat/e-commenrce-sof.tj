@@ -32,7 +32,7 @@
                         "
                     >
                         <img
-                            src="/img/icons/search.svg"
+                            src="/img/icons/search-header.svg"
                             alt="иконка поиска"
                             class="w-5"
                         />

@@ -25,7 +25,10 @@
 <script setup>
 const { product, cartIconColor } = defineProps({
     product: Object,
-    cartIconColor: String,
+    cartIconColor: {
+        type: String,
+        default: 'bg-slate-300'
+    },
 });
 
 const toCorrectCurrency = (price) => {

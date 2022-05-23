@@ -21,7 +21,8 @@
 
     input,
     button,
-    textarea {
+    textarea,
+    select {
         @apply border-inherit bg-inherit outline-none;
     }
 
