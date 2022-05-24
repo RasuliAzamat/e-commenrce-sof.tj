@@ -1,7 +1,7 @@
 <template>
     <button
         :class="[
-            'rounded-sm font-bold text-white ',
+            'rounded-xl font-bold text-white ',
             {
                 'bg-black': darkmode,
                 'bg-primary': !darkmode,

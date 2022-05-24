@@ -6,7 +6,7 @@
                 <input
                     type="text"
                     name="name"
-                    :value="user.name"
+                    :value="user.name + user.lastName"
                     class="profile-input"
                 />
             </div>

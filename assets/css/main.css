@@ -26,12 +26,12 @@
         @apply border-inherit bg-inherit outline-none;
     }
 
-    input[value] {
-        @apply text-dark-gray;
+    input {
+        @apply px-5 py-3 rounded-lg border-2 border-slate-200;
     }
 
-    .profile-input {
-        @apply px-5 py-3 border-2 rounded-lg border-slate-300;
+    input[value] {
+        @apply text-dark-gray;
     }
 
     nav ul li a.active {

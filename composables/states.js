@@ -98,14 +98,25 @@ const actions = [
 ]
 const user = {
     id: 1,
-    name: 'Муниса Имранова',
+    name: 'Муниса ',
+    lastName: 'Имранова',
     city: 'Душанбе',
     street: 'ул Рудаки 32, дом 3, кв 92',
     phone: '+992 90-101-0000',
     email: 'my-ami@gmail.com',
     password: '450640fkklhl;jdhf',
 }
+const cart = [
+    {
+        id: 1,
+        name: 'Влажные солфетки',
+        img: '/img/global/product-img-1.png',
+        price: 20,
+        count: 150,
+    },
+]
 
 export const useProducts = () => useState('products', () => products)
 export const useActions = () => useState('actions', () => actions)
 export const useUser = () => useState('user', () => user)
+export const useCart = () => useState('cart', () => cart)
