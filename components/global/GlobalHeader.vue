@@ -1,5 +1,5 @@
 <template>
-    <header class="flex items-center mb-10">
+    <header class="flex items-center">
         <NuxtLink to="/">
             <img src="/img/logo/header-logo.png" alt="Sof.tj logo" />
         </NuxtLink>
@@ -54,7 +54,10 @@
                     </NuxtLink>
 
                     <NuxtLink to="/profile" class="mr-8">
-                        <img src="/img/icons/profile.svg" alt="иконка профиля" />
+                        <img
+                            src="/img/icons/profile.svg"
+                            alt="иконка профиля"
+                        />
                     </NuxtLink>
                 </div>
             </div>

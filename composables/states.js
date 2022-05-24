@@ -90,5 +90,22 @@ const products = [
         img: '/img/global/product-img-3.png',
     },
 ]
+const actions = [
+    {id: 1, name: 'Заказы', component: 'ProfileOrders', query: 'orders'},
+    {id: 2, name: 'Адрес', component: 'ProfileAdress', query: 'adress'},
+    {id: 3, name: 'Настройки аккаунта', component: 'ProfileSettings', query: 'settings'},
+    {id: 4, name: 'Выйти', component: '', query: 'quit'},
+]
+const user = {
+    id: 1,
+    name: 'Муниса Имранова',
+    city: 'Душанбе',
+    street: 'ул Рудаки 32, дом 3, кв 92',
+    phone: '+992 90-101-0000',
+    email: 'my-ami@gmail.com',
+    password: '450640fkklhl;jdhf',
+}
 
 export const useProducts = () => useState('products', () => products)
+export const useActions = () => useState('actions', () => actions)
+export const useUser = () => useState('user', () => user)

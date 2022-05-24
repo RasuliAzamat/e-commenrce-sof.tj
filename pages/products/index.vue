@@ -1,5 +1,5 @@
 <template>
-    <section class="products-container px-8">
+    <section class="max-w-appContainer px-8 mx-auto">
         <ProductsHead />
 
         <div class="flex mb-28">
@@ -13,8 +13,4 @@
 </script>
 
 <style lang="css" scoped>
-.products-container {
-    max-width: 1440px;
-    margin: auto;
-}
 </style>

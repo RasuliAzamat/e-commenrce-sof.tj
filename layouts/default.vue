@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <GlobalHeader />
+    <div class="flex flex-col min-h-screen">
+        <GlobalHeader class="mb-10" />
 
         <main>
             <slot />
         </main>
-        
-        <GlobalFooter />
+
+        <GlobalFooter class="mt-auto" />
     </div>
 </template>
 

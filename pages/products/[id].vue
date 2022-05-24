@@ -1,16 +1,12 @@
 <template>
-    <div class="product-container px-8">
+    <section class="max-w-appContainer px-8 mx-auto">
         <ProductsItemInfo />
         <ProductsAlsoSee />
-    </div>
+    </section>
 </template>
 
 <script setup>
 </script>
 
 <style lang="css" scoped>
-.product-container {
-    max-width: 1440px;
-    margin: auto;
-}
 </style>

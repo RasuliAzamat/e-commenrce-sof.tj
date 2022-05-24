@@ -14,11 +14,14 @@ module.exports = {
                 light: '#EAEAEA',
                 danger: '#D96685',
                 dark: '#1E1E1E',
+                'dark-gray': '#150802',
             },
             fontFamily: {
                 mainFamily: ['DM Sans', 'sans-serif'],
             },
-            
+            maxWidth: {
+                appContainer: '1440px',
+            },
         },
     },
     plugins: [],
