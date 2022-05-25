@@ -6,8 +6,8 @@
             class="mb-4 last:mb-0 font-bold"
         >
             <NuxtLink
-                :to="`/profile/${query}`"
                 v-if="name === 'Заказы'"
+                :to="`/profile/${query}`"
                 :class="{ isIndex }"
             >
                 {{ name }}

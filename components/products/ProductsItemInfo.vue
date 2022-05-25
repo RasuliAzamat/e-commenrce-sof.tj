@@ -60,47 +60,20 @@
 
                         <div class="flex">
                             <button
-                                class="
-                                    flex
-                                    items-center
-                                    justify-center
-                                    w-10
-                                    h-10
-                                    mr-1.5
-                                    rounded-lg
-                                    text-slate-500
-                                    bg-white
-                                "
+                                class="counter-view mr-1.5"
+                                @click="addOneProductToCart(currentProduct.id)"
                             >
                                 +
                             </button>
-                            <p
-                                class="
-                                    flex
-                                    items-center
-                                    justify-center
-                                    w-10
-                                    h-10
-                                    mr-1.5
-                                    rounded-lg
-                                    text-slate-500
-                                    bg-white
-                                "
-                            >
-                                0
+                            <p class="counter-view mr-1.5">
+                                {{ currentProduct.count }}
                             </p>
                             <button
-                                class="
-                                    flex
-                                    items-center
-                                    justify-center
-                                    w-10
-                                    h-10
-                                    mr-1.5
-                                    rounded-lg
-                                    text-slate-500
-                                    bg-white
+                                class="counter-view"
+                                @click="
+                                    deleteOneProductFromCart(currentProduct.id)
                                 "
+                                :disabled="currentProduct.count === 0"
                             >
                                 -
                             </button>
@@ -108,7 +81,10 @@
                     </div>
 
                     <div>
-                        <ElementButton class="w-full py-2 rounded-lg mb-2">
+                        <ElementButton
+                            class="w-full py-2 rounded-lg mb-2"
+                            @click="$router.push('/cart')"
+                        >
                             <img
                                 src="/img/icons/shopping-bag.svg"
                                 alt="Иконка сумочки"
@@ -127,6 +103,14 @@
 </template>
 
 <script setup>
+import {
+    addToCart,
+    addOneProductToCart,
+    deleteOneProductFromCart,
+    deleteProductFromCart,
+    addOrder,
+} from "@/composables/states";
+
 const route = useRoute();
 const products = useProducts();
 
@@ -140,5 +124,8 @@ table tbody tr {
 }
 table tbody tr td:first-child {
     @apply w-1/2 pl-5;
+}
+.counter-view {
+    @apply flex items-center justify-center w-10 h-10 rounded-lg text-slate-500 bg-white;
 }
 </style>

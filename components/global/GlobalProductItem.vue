@@ -10,7 +10,7 @@
 
             <div class="flex justify-between">
                 <div class="text-xl">
-                    <p>{{ product.name }}</p>
+                    <p>{{ product.name }} ({{ product.id }})</p>
                     <small class="text-yellow-800">
                         {{ toCorrectCurrency(product.price) }} смн
                     </small>
@@ -18,7 +18,9 @@
 
                 <button
                     :class="['p-2 rounded-full self-end', cartIconColor]"
-                    @click.prevent
+                    @click.stop.prevent="
+                        addToCart(product.id), $router.push('/cart')
+                    "
                 >
                     <img
                         src="/img/icons/product-cart.svg"
@@ -31,6 +33,8 @@
 </template>
 
 <script setup>
+import { addToCart } from "@/composables/states";
+
 const { product, cartIconColor } = defineProps({
     product: Object,
     cartIconColor: {

@@ -13,25 +13,33 @@
             <tr v-for="{ id, name, price, count, img } in cart" :key="id">
                 <td class="flex items-center">
                     <img :src="img" :alt="name" class="w-24 mr-5" />
-                    <strong>{{ name }}</strong>
+                    <strong>{{ name }} ({{ id }})</strong>
                 </td>
                 <td>
                     <strong>{{ price }} с.</strong>
                 </td>
                 <td>
                     <div class="flex">
-                        <button class="count-control cursor-pointer mr-2">
+                        <button
+                            class="count-control cursor-pointer mr-2"
+                            @click="addOneProductToCart(id)"
+                        >
                             +
                         </button>
                         <small class="count-control mr-2">{{ count }}</small>
-                        <button class="count-control cursor-pointer">-</button>
+                        <button
+                            class="count-control cursor-pointer"
+                            @click="deleteOneProductFromCart(id)"
+                        >
+                            -
+                        </button>
                     </div>
                 </td>
                 <td>
                     <strong>{{ price * count }} с.</strong>
                 </td>
                 <td>
-                    <button>
+                    <button @click="deleteProductFromCart(id)">
                         <img
                             src="/img/icons/trash-box.svg"
                             alt="Иконка орзины мусора"
@@ -49,6 +57,13 @@
 </template>
 
 <script setup>
+import {
+    addOneProductToCart,
+    deleteOneProductFromCart,
+    deleteProductFromCart,
+    addOrder,
+} from "@/composables/states";
+
 const cart = useCart();
 </script>
 

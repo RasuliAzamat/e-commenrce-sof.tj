@@ -30,17 +30,39 @@
                 </tfoot>
             </table>
         </div>
-        <ElementButton class="w-full py-2"> Подтвердить заказ </ElementButton>
+        <ElementButton
+            class="w-full py-2"
+            @click="
+                addOrder({
+                    id: Date.now(),
+                    date: new Date().toLocaleDateString(),
+                    name: orders,
+                    price: fullPrice,
+                })
+            "
+            >Подтвердить заказ</ElementButton
+        >
     </div>
 </template>
 
 <script setup>
+import { addOrder } from "@/composables/states";
+
 const cart = useCart();
+
 const fullPrice = computed(() => {
     return cart.value.reduce((accum, next) => {
         return (accum += next.price * next.count);
     }, 0);
 });
+
+const orders = computed(() => {
+    return cart.value.reduce((accum, curr) => {
+        return (accum += curr.name);
+    }, []);
+});
+
+console.log(orders);
 </script>
 
 <style lang="postcss" scoped>
