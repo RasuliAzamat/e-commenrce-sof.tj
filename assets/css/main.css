@@ -26,13 +26,13 @@
         @apply border-inherit bg-inherit outline-none;
     }
 
-    input {
+    /* input {
         @apply px-5 py-3 rounded-lg border-2 border-slate-200;
     }
 
     input[value] {
         @apply text-dark-gray;
-    }
+    } */
 
     nav ul li a.active {
         @apply bg-danger;

@@ -53,12 +53,16 @@
                         <img src="/img/icons/cart.svg" alt="иконка корзины" />
                     </NuxtLink>
 
-                    <NuxtLink to="/profile" class="mr-8">
+                    <a
+                        @click.prevent="profileHandler"
+                        to="#"
+                        class="mr-8"
+                    >
                         <img
                             src="/img/icons/profile.svg"
                             alt="иконка профиля"
                         />
-                    </NuxtLink>
+                    </a>
                 </div>
             </div>
             <nav class="w-full bg-primary">
@@ -86,6 +90,53 @@
                 </ul>
             </nav>
         </div>
+        <Teleport to="body">
+            <GlobalModal
+                :isVisible="isVisible"
+                @changeVisability="isVisible = false"
+            >
+                <h3 class="mb-16">Регистрация</h3>
+
+                <GlobalInputFieldItem
+                    labelText="ФИО"
+                    inputName="name"
+                    class="mb-8"
+                />
+                <GlobalInputFieldItem
+                    labelText="Почта"
+                    inputType="email"
+                    inputName="email"
+                    class="mb-8"
+                />
+                <GlobalInputFieldItem
+                    labelText="Номер телефона"
+                    inputType="tel"
+                    inputName="phone"
+                    class="mb-8"
+                />
+                <GlobalInputFieldItem
+                    labelText="Пароль"
+                    inputType="password"
+                    inputName="password"
+                    class="mb-8"
+                />
+                <GlobalInputFieldItem
+                    labelText="Подтверждение пароля"
+                    inputType="password"
+                    inputName="confirm"
+                    class="mb-16"
+                />
+
+                <ElementButton class="w-full py-5 mb-8" darkmode>
+                    Зарегестрироваться
+                </ElementButton>
+
+                <div class="text-center">
+                    <p class="inline-block mr-2">Уже есть аккаунт?</p>
+                    <a href="/" class="border-b border-black">Выполните вход</a>
+                </div>
+            </GlobalModal>
+        </Teleport>
     </header>
 </template>
 
@@ -98,12 +149,24 @@ import {
     UserIcon,
 } from "@heroicons/vue/solid";
 
+const router = useRouter();
+const userState = useUser();
+
 const navLinks = ref([
     { path: "/", name: "Магазин" },
     { path: "/about", name: "О нас" },
     { path: "/reviews", name: "Отзывы" },
     { path: "/contacts", name: "Контакты" },
 ]);
+
+const isVisible = ref(false);
+
+const profileHandler = () => {
+    if (userState.value.id) {
+        return router.push("/profile");
+    }
+    isVisible.value = true;
+};
 </script>
 
 <style lang="postcss" scoped>
