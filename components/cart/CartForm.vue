@@ -3,29 +3,35 @@
         <h3 class="mb-6">Контактная информация</h3>
 
         <div v-if="user">
-            <input type="text" name="lastName" :value="user.lastName" />
-            <input type="text" name="name" :value="user.name" />
-            <input type="tel" name="phone" :value="user.phone" />
-            <input
-                type="text"
-                name="adress"
-                :value="user.street"
+            <ElementInput inputName="lastName" :inputValue="user.lastName" />
+            <ElementInput inputName="name" :inputValue="user.name" />
+            <ElementInput
+                inputType="tel"
+                inputName="phone"
+                :inputValue="user.phone"
+            />
+            <ElementInput
+                inputName="adress"
+                :inputValue="user.street"
                 v-if="isDelivery == true"
             />
         </div>
         <div v-else class="mb-5">
-            <input type="text" name="lastName" placeholder="Фамилия*" />
-            <input type="text" name="name" placeholder="Имя*" />
-            <input type="tel" name="phone" placeholder="Номер телефона*" />
-            <input
-                type="text"
-                name="adress"
+            <ElementInput inputName="lastName" inputPlaceholder="Фамилия*" />
+            <ElementInput inputName="name" inputPlaceholder="Имя*" />
+            <ElementInput
+                inputType="tel"
+                inputName="phone"
+                placeholder="Номер телефона*"
+            />
+            <ElementInput
+                inputName="adress"
                 placeholder="Адрес*"
                 v-if="isDelivery == true"
             />
         </div>
 
-        <ElementButton class="px-5 py-3"> Далее </ElementButton>
+        <ElementButton class="px-5 py-3">Далее</ElementButton>
     </form>
 </template>
 

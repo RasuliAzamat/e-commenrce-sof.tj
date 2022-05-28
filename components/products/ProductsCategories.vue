@@ -30,7 +30,7 @@
         <div class="mb-7">
             <p class="mb-2 font-bold">Цена</p>
             <div>
-                <input type="range" name="price" />
+                <ElementInput inputType="range" inputName="price" />
             </div>
             <small>Цена от 20 до 1000 смн</small>
         </div>

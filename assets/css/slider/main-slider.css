@@ -1,18 +1,13 @@
-.main-slider .swiper-horizontal > .swiper-pagination-bullets,
-.main-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 10%;
-}
-
 .main-slider .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    margin: 0 10px !important;
-    opacity: 1;
-    background-color: #fff;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px !important;
+  opacity: 1;
+  background-color: #fff;
 }
 
 .main-slider .swiper-pagination-bullet-active {
-    transform: scale(2);
-    background: none;
-    border: 1px solid white;
+  transform: scale(2);
+  background: none;
+  border: 1px solid white;
 }

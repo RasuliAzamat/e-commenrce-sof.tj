@@ -3,19 +3,27 @@
         <div class="w-1/2 mx-auto">
             <div class="input-field">
                 <label for="city">Город</label>
-                <input type="text" name="city" :value="user.city" />
+                <ElementInput inputName="city" :inputValue="user.city" />
             </div>
             <div class="input-field">
                 <label for="street">Улица</label>
-                <input type="text" name="street" :value="user.street" />
+                <ElementInput inputName="street" :inputValue="user.street" />
             </div>
             <div class="input-field">
                 <label for="phone">Телефон</label>
-                <input type="tel" name="phone" :value="user.phone" />
+                <ElementInput
+                    inpytType="tel"
+                    inputName="phone"
+                    :inputValue="user.phone"
+                />
             </div>
             <div class="input-field">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" :value="user.email" />
+                <ElementInput
+                    inpytType="email"
+                    inputName="email"
+                    :inputValue="user.email"
+                />
             </div>
         </div>
     </div>

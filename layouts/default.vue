@@ -1,20 +1,19 @@
 <template>
-    <div class="flex flex-col min-h-screen">
-        <GlobalHeader class="mb-10" />
+  <div class="flex flex-col min-h-screen">
+    <GlobalHeader />
 
-        <main>
-            <slot />
-        </main>
+    <main>
+      <slot />
+    </main>
 
-        <GlobalFooter class="mt-auto" />
-    </div>
+    <GlobalFooter />
+  </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="css" scoped>
 .modal {
-    width: 510px !important;
+  width: 510px !important;
 }
 </style>
