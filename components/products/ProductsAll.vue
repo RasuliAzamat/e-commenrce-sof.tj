@@ -1,12 +1,7 @@
 <template>
-  <div class="flex flex-col items-end">
-    <div class="flex flex-wrap justify-end mb-12">
-      <GlobalProductItem
-        v-for="product in products"
-        :key="product.id"
-        class="inline-block mr-16 mb-9 product"
-        :product="product"
-      />
+  <div>
+    <div class="grid grid-rows-1 grid-cols-2 md:grid-cols-3 gap-10 xl:gap-16 mb-12">
+      <GlobalProductItem v-for="product in products" :key="product.id" :product="product" />
     </div>
     <ProductsPagination />
   </div>
@@ -16,8 +11,4 @@
 const products = useProducts()
 </script>
 
-<style lang="postcss" scoped>
-.product:nth-child(3n) {
-  @apply mr-0;
-}
-</style>
+<style lang="postcss" scoped></style>

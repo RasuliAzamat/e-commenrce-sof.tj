@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center">
+  <div class="flex flex-wrap items-center">
     <ProductsPaginationItem isActive path="#">
       <ArrowLeftIcon class="w-4 text-inherit" />
     </ProductsPaginationItem>

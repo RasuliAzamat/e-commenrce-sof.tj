@@ -2,7 +2,7 @@
   <NuxtLink
     :to="path"
     :class="[
-      'flex items-center justify-center w-11 h-11 cursor-pointer rounded-md',
+      'flex items-center justify-center w-11 h-11 mb-2 cursor-pointer rounded-md',
       {
         'bg-primary text-white': isActive,
         'bg-slate-200 text-primary': !isActive,

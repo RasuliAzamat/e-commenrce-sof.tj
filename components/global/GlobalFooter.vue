@@ -1,6 +1,6 @@
 <template>
-  <footer>
-    <div class="flex flex-col mt-auto p-4 bg-primary text-white lg:p-8">
+  <footer class="mt-auto">
+    <div class="flex flex-col p-4 bg-primary text-white lg:p-8">
       <div
         class="mb-7 pb-6 flex flex-col items-center justify-between border-white border-b-2 md:flex-row"
       >
