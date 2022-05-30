@@ -3,7 +3,7 @@
     <label v-if="labelText?.length" :for="inputName" class="block mb-2">
       {{ labelText }}
     </label>
-    <ElementInput
+    <input
       :type="inputType"
       :name="inputName"
       :value="inputValue"

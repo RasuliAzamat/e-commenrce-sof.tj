@@ -7,7 +7,6 @@
 
       <div class="flex items-center flex-col flex-1">
         <div class="flex items-center w-full mb-4">
-
           <div class="flex items-center ml-auto mr-10 lg:mr-20">
             <input
               type="text"
@@ -34,7 +33,6 @@
               <img src="/img/icons/profile.svg" alt="иконка профиля" />
             </a>
           </div>
-
         </div>
 
         <nav class="w-full bg-primary">
@@ -47,7 +45,6 @@
             </li>
           </ul>
         </nav>
-
       </div>
     </div>
 
@@ -85,7 +82,12 @@
         <ElementInput labelText="Почта" inputType="email" inputName="email" class="mb-8" />
         <ElementInput labelText="Номер телефона" inputType="tel" inputName="phone" class="mb-8" />
         <ElementInput labelText="Пароль" inputType="password" inputName="password" class="mb-8" />
-        <ElementInput labelText="Подтверждение пароля" inputType="password" inputName="confirm" class="mb-16" />
+        <ElementInput
+          labelText="Подтверждение пароля"
+          inputType="password"
+          inputName="confirm"
+          class="mb-16"
+        />
 
         <ElementButton class="w-full py-5 mb-8" darkmode> Зарегестрироваться </ElementButton>
 
@@ -95,7 +97,6 @@
         </div>
       </GlobalModal>
     </Teleport>
-    
   </header>
 </template>
 

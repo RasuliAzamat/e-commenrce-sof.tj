@@ -12,7 +12,6 @@
         <p class="absolute top-2/3 ml-3 z-10">{{ title }}</p>
       </div>
     </div>
-    
   </section>
 </template>
 

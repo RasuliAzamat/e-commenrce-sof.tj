@@ -1,6 +1,5 @@
 <template>
   <section class="slider-wrapper mb-12 px-4 lg:px-8">
-
     <swiper
       :modules="modules"
       :pagination="{clickable: true}"
@@ -26,7 +25,6 @@
         alt="Влажные салфетки"
       />
     </div>
-    
   </section>
 </template>
 

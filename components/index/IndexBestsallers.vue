@@ -1,7 +1,6 @@
 <template>
   <section class="bg-slate-200">
     <div class="container max-w-6xl ml-auto mb-24 px-4 pt-9 lg:px-8">
-
       <div class="mb-8 sm:flex sm:items-center sm:justify-between">
         <h2 class="text-danger">Хиты продаж</h2>
         <NuxtLink to="/products" class="hidden text-2xl no-underline sm:inline-block">
@@ -26,7 +25,6 @@
       <div class="block pb-20 text-center sm:hidden">
         <NuxtLink to="/products" class="text-2xl no-underline"> Cмотреть все </NuxtLink>
       </div>
-      
     </div>
   </section>
 </template>
