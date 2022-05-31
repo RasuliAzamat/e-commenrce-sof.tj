@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-1/2 mx-auto">
+    <div class="mt-10 md:mt-0 md:w-1/2 mx-auto">
       <div class="input-field">
         <label for="city">Город</label>
         <ElementInput inputName="city" :inputValue="user.city" />

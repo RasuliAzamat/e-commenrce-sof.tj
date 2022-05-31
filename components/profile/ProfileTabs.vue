@@ -1,6 +1,8 @@
 <template>
-  <ul>
-    <li v-for="{id, name, query} in actions" :key="id" class="mb-4 last:mb-0 font-bold">
+  <ul
+    class="flex justify-between pb-5 border-b-2 border-b-black md:border-b-0 md:flex-col md:justify-start md:mb-0"
+  >
+    <li v-for="{id, name, query} in actions" :key="id" class="md:mb-4 md:last:mb-0 font-bold">
       <NuxtLink v-if="name === 'Заказы'" :to="`/profile/${query}`" :class="{isIndex}">
         {{ name }}
       </NuxtLink>
