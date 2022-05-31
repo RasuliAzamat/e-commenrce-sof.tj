@@ -9,7 +9,7 @@
         class="news w-full h-32 mr-3 mb-5 last:mr-0 rounded-lg md:flex-1 md:mb-0 md:h-48"
         :style="`background-image: url(${img});`"
       >
-        <p class="absolute top-2/3 ml-3 z-10">{{ title }}</p>
+        <p class="absolute top-1/3 sm:top-2/3 ml-3 z-10">{{ title }}</p>
       </div>
     </div>
   </section>
