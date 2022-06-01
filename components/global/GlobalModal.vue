@@ -24,13 +24,21 @@ const {isVisible} = defineProps({
 
 .modal {
   width: 650px !important;
+  overflow-y: auto;
   @apply pt-14 pb-20 px-16 rounded-2xl bg-white;
 }
 
 @media (max-width: 768px) {
   .modal {
-    width: 390px !important;
+    width: 90vw !important;
+    height: 80vh !important;
     @apply pt-9 pb-12 px-10;
+  }
+}
+
+@media (max-width: 425px) {
+  .modal {
+    @apply pt-6 pb-9 px-7;
   }
 }
 </style>

@@ -12,8 +12,4 @@
 
 <script setup></script>
 
-<style lang="css" scoped>
-.modal {
-  width: 510px !important;
-}
-</style>
+<style lang="css" scoped></style>

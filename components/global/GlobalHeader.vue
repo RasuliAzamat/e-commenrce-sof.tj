@@ -76,25 +76,30 @@
 
     <Teleport to="body">
       <GlobalModal :isVisible="isVisible" @changeVisability="isVisible = false">
-        <h3 class="mb-16">Регистрация</h3>
+        
+        <h3 class="mb-16">
+          {{ isLogin ? 'Войти' : 'Регистрация' }}
+        </h3>
 
-        <ElementInput labelText="ФИО" inputName="name" class="mb-8" />
-        <ElementInput labelText="Почта" inputType="email" inputName="email" class="mb-8" />
+        <ElementInput v-if="isLogin === false" labelText="ФИО" inputName="name" class="mb-8" />
+        <ElementInput v-if="isLogin === false" labelText="Почта" inputType="email" inputName="email" class="mb-8" />
         <ElementInput labelText="Номер телефона" inputType="tel" inputName="phone" class="mb-8" />
         <ElementInput labelText="Пароль" inputType="password" inputName="password" class="mb-8" />
-        <ElementInput
-          labelText="Подтверждение пароля"
-          inputType="password"
-          inputName="confirm"
-          class="mb-16"
-        />
+        <ElementInput v-if="isLogin === false" labelText="Подтверждение пароля" inputType="password" inputName="confirm" class="mb-16" />
 
-        <ElementButton class="w-full py-5 mb-8" darkmode> Зарегестрироваться </ElementButton>
+        <ElementButton class="w-full py-5 mb-8" darkmode>
+          {{ isLogin ? 'Войти' : 'Зарегестрироваться' }}
+        </ElementButton>
 
         <div class="text-center">
-          <p class="inline-block mr-2">Уже есть аккаунт?</p>
-          <a href="/" class="border-b border-black">Выполните вход</a>
+          <p class="inline-block mr-2">
+            {{ isLogin ? 'Нет аккаунта?' : 'Уже есть аккаунт?' }}
+          </p>
+          <a href="#" @click.prevent="isLogin = !isLogin" class="border-b border-black">
+            {{ isLogin ? 'Зарегестрируйтесь' : 'Выполните вход' }}
+          </a>
         </div>
+
       </GlobalModal>
     </Teleport>
   </header>
@@ -113,7 +118,8 @@ const navLinks = ref([
   {path: '/contacts', name: 'Контакты'},
 ])
 
-const isVisible = ref(false)
+const isVisible = ref(true)
+const isLogin = ref(true)
 
 const profileHandler = () => {
   if (userState.value.id) {
