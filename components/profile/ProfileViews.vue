@@ -1,5 +1,6 @@
 <template>
-  <component :is="components[component]"></component>
+  <component v-if="isIndex" :is="ProfileOrders"></component>
+  <component v-else :is="components[component]"></component>
 </template>
 
 <script setup>
@@ -10,6 +11,12 @@ import ProfileTabs from './ProfileTabs.vue'
 
 const route = useRoute()
 const actions = useActions()
+const {isIndex} = defineProps({
+  isIndex: {
+    type: Boolean,
+    default: false,
+  },
+})
 
 const components = {
   ProfileAdress,

@@ -1,11 +1,11 @@
 <template>
-  <div class="mb-16">
+  <div>
     <h3 class="mb-6">Способ доставки</h3>
 
-    <div class="flex">
+    <div class="flex flex-col sm:flex-row">
       <ElementButton
         :class="[
-          'rounded-xl px-6 py-2 mr-5 delivery-option',
+          'sm:w-1/2 md:w-auto px-6 py-2 mb-5 sm:mb-0 sm:mr-5 rounded-xl delivery-option',
           {
             active: !isDelivery,
           },
@@ -17,7 +17,7 @@
       </ElementButton>
       <ElementButton
         :class="[
-          'rounded-xl px-6 py-2 mr-5 delivery-option',
+          'sm:w-1/2 md:w-auto px-6 py-2 mb-5 sm:mb-0 sm:mr-5 rounded-xl delivery-option',
           {
             active: isDelivery,
           },
