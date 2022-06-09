@@ -76,16 +76,27 @@
 
     <Teleport to="body">
       <GlobalModal :isVisible="isVisible" @changeVisability="isVisible = false">
-        
         <h3 class="mb-16">
           {{ isLogin ? 'Войти' : 'Регистрация' }}
         </h3>
 
         <ElementInput v-if="isLogin === false" labelText="ФИО" inputName="name" class="mb-8" />
-        <ElementInput v-if="isLogin === false" labelText="Почта" inputType="email" inputName="email" class="mb-8" />
+        <ElementInput
+          v-if="isLogin === false"
+          labelText="Почта"
+          inputType="email"
+          inputName="email"
+          class="mb-8"
+        />
         <ElementInput labelText="Номер телефона" inputType="tel" inputName="phone" class="mb-8" />
         <ElementInput labelText="Пароль" inputType="password" inputName="password" class="mb-8" />
-        <ElementInput v-if="isLogin === false" labelText="Подтверждение пароля" inputType="password" inputName="confirm" class="mb-16" />
+        <ElementInput
+          v-if="isLogin === false"
+          labelText="Подтверждение пароля"
+          inputType="password"
+          inputName="confirm"
+          class="mb-16"
+        />
 
         <ElementButton class="w-full py-5 mb-8" darkmode>
           {{ isLogin ? 'Войти' : 'Зарегестрироваться' }}
@@ -99,7 +110,6 @@
             {{ isLogin ? 'Зарегестрируйтесь' : 'Выполните вход' }}
           </a>
         </div>
-
       </GlobalModal>
     </Teleport>
   </header>
@@ -109,7 +119,7 @@
 import {DotsVerticalIcon} from '@heroicons/vue/solid'
 
 const router = useRouter()
-const userState = useUser()
+const usersState = useUsers()
 
 const navLinks = ref([
   {path: '/', name: 'Магазин'},
@@ -118,14 +128,20 @@ const navLinks = ref([
   {path: '/contacts', name: 'Контакты'},
 ])
 
-const isVisible = ref(true)
+const isVisible = ref(false)
 const isLogin = ref(true)
 
 const profileHandler = () => {
-  if (userState.value.id) {
-    return router.push('/profile')
+  if (!usersState.value.length) {
+    return (isVisible.value = true)
   }
-  isVisible.value = true
+
+  usersState.value.forEach(user => {
+    if (user.id) {
+      return router.push('/profile')
+    }
+    return (isVisible.value = true)
+  })
 }
 </script>
 

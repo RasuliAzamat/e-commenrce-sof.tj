@@ -105,28 +105,24 @@ const products = [
     count: 0,
   },
 ]
-const actions = [
-  {id: 1, name: 'Заказы', component: 'ProfileOrders', query: 'orders'},
-  {id: 2, name: 'Адрес', component: 'ProfileAdress', query: 'adress'},
-  {id: 3, name: 'Настройки аккаунта', component: 'ProfileSettings', query: 'settings'},
-  {id: 4, name: 'Выйти', component: '', query: 'quit'},
+
+const users = [
+  {
+    id: 1,
+    name: 'Муниса ',
+    lastName: 'Имранова',
+    city: 'Душанбе',
+    street: 'ул Рудаки 32, дом 3, кв 92',
+    phone: '+992 90-101-0000',
+    email: 'my-ami@gmail.com',
+    password: '450640fkklhl;jdhf',
+  },
 ]
-const user = {
-  id: 1,
-  name: 'Муниса ',
-  lastName: 'Имранова',
-  city: 'Душанбе',
-  street: 'ул Рудаки 32, дом 3, кв 92',
-  phone: '+992 90-101-0000',
-  email: 'my-ami@gmail.com',
-  password: '450640fkklhl;jdhf',
-}
 const cart = []
 const order = []
 
 const useProducts = () => useState('products', () => products)
-const useActions = () => useState('actions', () => actions)
-const useUser = () => useState('user', () => user)
+const useUsers = () => useState('users', () => users)
 const useCart = () => useState('cart', () => cart)
 const useOrder = () => useState('order', () => order)
 
@@ -199,8 +195,7 @@ const addOrder = elements => {
 
 export {
   useProducts,
-  useActions,
-  useUser,
+  useUsers,
   useCart,
   useOrder,
   addToCart,

@@ -21,7 +21,12 @@ const {isIndex} = defineProps({
     default: false,
   },
 })
-const actions = useActions()
+const actions = ref([
+  {id: 1, name: 'Заказы', component: 'ProfileOrders', query: 'orders'},
+  {id: 2, name: 'Адрес', component: 'ProfileAdress', query: 'adress'},
+  {id: 3, name: 'Настройки аккаунта', component: 'ProfileSettings', query: 'settings'},
+  {id: 4, name: 'Выйти', component: '', query: 'quit'},
+])
 </script>
 
 <style lang="css" scoped>

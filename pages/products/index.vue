@@ -4,11 +4,13 @@
 
     <div class="md:flex">
       <ProductsCategories class="hidden md:basis-2/12 md:inline-block md:mr-28" />
-      <ProductsAll class="md:basis-5/6" />
+      <ProductsAll :products="products" class="md:basis-5/6" />
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const products = useProducts()
+</script>
 
 <style lang="css" scoped></style>

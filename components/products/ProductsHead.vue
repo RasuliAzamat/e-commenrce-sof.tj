@@ -42,9 +42,8 @@
 
           <select name="sort" class="py-2 px-4 rounded-md font-bold bg-slate-200">
             <option value="default" disabled selected>Сортировка по</option>
-
-            <option value="price ascending">Цена по возрастанию</option>
-            <option value="price descending">Цена по убыванию</option>
+            <option value="price ascending" :v-model="ascending">Цена по возрастанию</option>
+            <option value="price descending" :v-model="descending">Цена по убыванию</option>
           </select>
         </div>
       </div>

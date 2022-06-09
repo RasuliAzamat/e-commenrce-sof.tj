@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-const user = useUser()
+const user = useUsers()
 const {isDelivery} = defineProps({
   isDelivery: {
     type: Boolean,

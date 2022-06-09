@@ -10,13 +10,20 @@ import ProfileSettings from './ProfileSettings.vue'
 import ProfileTabs from './ProfileTabs.vue'
 
 const route = useRoute()
-const actions = useActions()
+
 const {isIndex} = defineProps({
   isIndex: {
     type: Boolean,
     default: false,
   },
 })
+
+const actions = ref([
+  {id: 1, name: 'Заказы', component: 'ProfileOrders', query: 'orders'},
+  {id: 2, name: 'Адрес', component: 'ProfileAdress', query: 'adress'},
+  {id: 3, name: 'Настройки аккаунта', component: 'ProfileSettings', query: 'settings'},
+  {id: 4, name: 'Выйти', component: '', query: 'quit'},
+])
 
 const components = {
   ProfileAdress,

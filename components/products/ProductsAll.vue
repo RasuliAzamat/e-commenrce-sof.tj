@@ -8,7 +8,12 @@
 </template>
 
 <script setup>
-const products = useProducts()
+const {products} = defineProps({
+  products: {
+    type: Array,
+    required: true,
+  },
+})
 </script>
 
 <style lang="postcss" scoped></style>

@@ -152,7 +152,7 @@ table.desctop tbody tr td {
   color: #150802;
 }
 
-table.desctop tbody tr:nth-child(2n) {
+table.desctop tbody tr:nth-child(2n + 1) {
   @apply bg-slate-100;
 }
 </style>
